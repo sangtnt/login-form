@@ -1,0 +1,199 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+body{
+    background-image: linear-gradient(to right top, #051937, #121e4d, #2b1f5f, #4a1a6e, #6c0076);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cursive;
+    position: relative;
+    padding: 0;
+}
+.tran-logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    z-index: 9999;
+}
+.star{
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    z-index: 99;
+}
+.character{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 15rem;
+    filter: grayscale(50%);
+    animation: animationCharacter 7s infinite linear;
+    z-index: 9999;
+}
+@keyframes animationCharacter{
+    0%{
+        left:-10%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+.login-form{
+    padding: 2rem;
+    background-color: rgba(29, 28, 28, 0.5);
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 3px 3px 10px rgb(46, 46, 46);
+    padding: 1rem;
+    z-index: 99999;
+}
+
+.login-form .logo{
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgb(46, 46, 46);
+    user-select: none;
+}
+.login-form .title{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    user-select: none;
+    letter-spacing: 10px;
+}
+.login-form .form-input{
+    display: block;
+    margin-top: 20px;
+    font-size: 1rem;
+    outline: none;
+    padding: .3rem;
+    border-radius: 2rem;
+    border: none;
+    width: 100%;
+    background-color: rgba(19, 18, 18, 0.5);
+    color: white;
+    font-family: cursive;
+    transition: .3s all;
+}
+.login-form .form-input:hover,.login-form .form-input:focus{
+    transform: scale(1.0.8);
+    border: 2px solid aqua;
+}
+.username{
+    position: relative;
+}
+.username:after{
+    position: absolute;
+    background-color: red;
+    content: 'sas';
+    top:0;
+    left: 0;
+}
+.login-form button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0.4rem;
+    border: none;
+    font-family: cursive;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    color: seashell;
+    transition: .3s all;
+    letter-spacing: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.login-form button:hover{
+    transform: scale(1.1);
+}
+.login-form button:before{
+    content:'';
+    transform: skew(50deg);
+    position: absolute;
+    left: -25px;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background-color: rgba(59, 59, 59, 0.3);
+    transition: .5s all ease-in;
+}
+.login-form button:hover:before{
+    left: 120%;
+    top: 0;
+}
+.login-form p{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    color: rgb(125, 145, 255);
+}
+.login-form p input[type="checkbox"]{
+    margin: 0;
+    margin-right: 10px;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 5px;
+    color: aqua;
+    transition: .3s all;
+    outline: none;
+    background-color: rgba(19, 18, 18, 0.5);
+}
+.login-form p input[type="checkbox"]:hover{
+    transform: scale(1.1);
+    border: 2px solid aqua;
+}
+.login-form p input[type="checkbox"]:before{
+    content :'\f00c';
+    font-family: "fontAwesome";
+    opacity: 0;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 20px;
+    transition: all .3s;
+}
+.login-form p input[type="checkbox"]:checked:before{
+    opacity: 1;
+    border-radius: 5px;
+    box-shadow: 0 0 5px aqua ;
+}
+.check-text{
+    user-select: none;
+    letter-spacing: 3px;
+}
+.forgot-password{
+    color: rgb(179, 65, 255);
+    transition: .2s all ease-in;
+}
+.forgot-password:hover, .sign-up:hover{
+    transform: rotate(5deg) skew(10deg);
+}
+.sign-up{
+    color: rgb(255, 92, 92);
+    transition: .2s all;
+}
